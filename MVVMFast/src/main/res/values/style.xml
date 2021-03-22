@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="State_fail_txt">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#4272F8</item>
+    </style>
+
+
+    <style name="VersionAlertStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

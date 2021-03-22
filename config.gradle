@@ -1,0 +1,108 @@
+ext {
+
+    android = [
+            buildToolsVersion: "30.0.3",
+            compileSdkVersion: 30,
+            targetSdkVersion : 30,
+            minSdkVersion    : 21,
+            versionName      : "1.0.0",
+            versionCode      : 1,
+    ]
+
+    db = [
+            schemaVersion: 1
+    ]
+
+    versions = [
+            androidxVersion  : "1.2.0",
+            material         : '1.3.0',
+            constraint       : '2.0.4',
+            annotation       : '1.1.0',
+            lifecycle_version: "2.2.0",
+            retrofitVersion  : "2.4.0",
+            glideVersion     : "4.9.0"
+    ]
+    //androidx
+    androidx = [
+            appcompat          : "androidx.appcompat:appcompat:${versions['androidxVersion']}",
+            material           : "com.google.android.material:material:${versions['material']}",
+            'core-ktx'         : "androidx.core:core-ktx:1.3.2",
+            'constraint-layout': "androidx.constraintlayout:constraintlayout:${versions["constraint"]}",
+            //viewModel and LiveData
+            'viewmodel-ktx'    : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions['lifecycle_version']}",
+            'annotation'       : "androidx.annotation:annotation:1.1.0",
+    ]
+    androidx_need = [
+            'BRVAH'                : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+            'refresh-kernel'       : 'com.scwang.smart:refresh-layout-kernel:2.0.3',
+            'refresh-footer'       : 'com.scwang.smart:refresh-footer-classics:2.0.3',
+            'refresh-classics'     : 'com.scwang.smart:refresh-header-classics:2.0.3',
+            'glide'                : 'com.github.bumptech.glide:glide:4.11.0',
+            //权限请求 + 协程 支持
+            'permission'           : 'com.afollestad.assent:core:3.0.0-RC4',
+            'permission-coroutines': 'com.afollestad.assent:coroutines:3.0.0-RC4',
+
+    ]
+    //network
+    retrofit = [
+            retrofit        : "com.squareup.retrofit2:retrofit:2.6.0",
+            "converter-gson": "com.squareup.retrofit2:converter-gson:2.6.0",
+    ]
+
+    //依赖第三方配置
+    dependencies = [
+            // LiveData
+            "livedata"                  : "androidx.lifecycle:lifecycle-livedata-ktx:${versions["lifecycle_version"]}",
+            // Lifecycles only (without ViewModel or LiveData)
+            "lifecycle-runtime"         : "androidx.lifecycle:lifecycle-runtime-ktx:${versions["lifecycle_version"]}",
+            // Saved state module for ViewModel
+            "viewmodel-savedstate"      : "androidx.lifecycle:lifecycle-viewmodel-savedstate:${versions["lifecycle_version"]}",
+            //glide图片加载
+            "glide-compiler"            : "com.github.bumptech.glide:compiler:4.11.0",
+            //material-dialogs
+            "material-dialogs-lifecycle": "com.afollestad.material-dialogs:lifecycle:3.1.1",
+            "material-dialogs-core"     : "com.afollestad.material-dialogs:core:3.1.1",
+            //Utils
+            utilcodex                   : 'com.blankj:utilcodex:1.29.0',
+            banner                      : 'com.github.xiaohaibin:XBanner:androidx_v1.0.2',
+            'bottom-tab'                : 'me.majiajie:pager-bottom-tab-strip:2.3.0X',
+            // DiskLruCache
+            "disklrucache"              : "com.jakewharton:disklrucache:2.0.2",
+
+            // EventBus 3.0
+            "eventbus"                  : "org.greenrobot:eventbus:3.1.1",
+            //GreenDao 3.0
+            "greendao"                  : "org.greenrobot:greendao:3.2.2",
+            //Gson
+            "gson"                      : "com.google.code.gson:gson:2.8.4",
+            // 滚轮选择控件
+            "pickerview"                : "com.contrarywind:Android-PickerView:4.1.8",
+            // 日历控件
+            "calendar"                  : "com.necer.ncalendar:ncalendar:4.0.4",
+            // 集成的常用文字+控件布局
+            "supertextview"             : "com.github.lygttpod:SuperTextView:2.4.2",
+            // 颜色选择器
+            "colorpicker"               : "com.jaredrummler:colorpicker:1.0.2",
+            "arouter"                   : 'com.alibaba:arouter-api:1.5.1',
+            "arouter_compiler"          : "com.alibaba:arouter-compiler:1.5.1",
+
+            // x5 浏览服务
+            "x5browser"                 : "com.tencent.tbs.tbssdk:sdk:43697",
+
+            // 图片选择
+            "pictureselector"           : "com.github.LuckSiege.PictureSelector:picture_library:v2.5.8",
+
+            /*鲁班压缩*/
+            "luban"                     : "top.zibin:Luban:1.1.3",
+            /*tablayout*/
+            "tablayout"                 : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            //  MMKV
+            "mmkv"                      : "com.tencent:mmkv-static:1.2.4",
+            /*banner*/
+            "banner"                    : "com.bigkoo:convenientbanner:2.1.5",
+    ]
+
+    androidxs = androidx.values()
+    need = androidx_need.values()
+    network = retrofit.values()
+}
